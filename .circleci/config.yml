@@ -18,6 +18,15 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "Create dir"
+          command: "mkdir build && mkdir boost"
+      - run:
+          name: "Do cmake"
+          command: "cd build && cmake .. DDOWNLOAD_BOOST=1 -DWITH_BOOST='./boost'"
+      - run:
+          name: "Do make"
+          command: "make"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
