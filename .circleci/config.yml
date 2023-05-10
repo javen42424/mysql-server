@@ -23,7 +23,7 @@ jobs:
           command: "mkdir build && mkdir boost"
       - run:
           name: "Do cmake"
-          command: "cd build && cmake .. DDOWNLOAD_BOOST=1 -DWITH_BOOST='./boost'"
+          command: "cd build && cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST='./boost'"
       - run:
           name: "Do make"
           command: "make"
