@@ -14,13 +14,13 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
-      - checkout
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
           name: "Update soft"
           command: "apt update -y && apt install -y libncurses5-dev"
+      - checkout
       - run:
           name: "Create dir"
           command: "mkdir build && mkdir boost"
