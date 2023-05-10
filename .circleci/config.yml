@@ -19,6 +19,9 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
+          name: "Update soft"
+          command: "apt update -y && apt install -y libncurses5-dev"
+      - run:
           name: "Create dir"
           command: "mkdir build && mkdir boost"
       - run:
